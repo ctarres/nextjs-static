@@ -1,0 +1,194 @@
+.the-arrow {
+  width: 64px;
+  transition: all 0.2s; }
+  .the-arrow.-left {
+    position: absolute;
+    top: 60%;
+    left: 0; }
+    .the-arrow.-left > .shaft {
+      width: 0;
+      background-color: #65c6c4; }
+      .the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+        width: 0;
+        background-color: #65c6c4; }
+      .the-arrow.-left > .shaft:before {
+        transform: rotate(0); }
+      .the-arrow.-left > .shaft:after {
+        transform: rotate(0); }
+  .the-arrow.-right {
+    top: 3px; }
+    .the-arrow.-right > .shaft {
+      width: 64px;
+      transition-delay: 0.2s; }
+      .the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+        width: 8px;
+        transition-delay: 0.3s;
+        transition: all 0.5s; }
+      .the-arrow.-right > .shaft:before {
+        transform: rotate(40deg); }
+      .the-arrow.-right > .shaft:after {
+        transform: rotate(-40deg); }
+  .the-arrow > .shaft {
+    background-color: #65c6c4;
+    display: block;
+    height: 1px;
+    position: relative;
+    transition: all 0.2s;
+    transition-delay: 0;
+    will-change: transform; }
+    .the-arrow > .shaft:before, .the-arrow > .shaft:after {
+      background-color: #65c6c4;
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.2s;
+      transition-delay: 0; }
+    .the-arrow > .shaft:before {
+      transform-origin: top right; }
+    .the-arrow > .shaft:after {
+      transform-origin: bottom right; }
+
+.animated-arrow {
+  display: inline-block;
+  color: #65c6c4;
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s; }
+  .animated-arrow:hover {
+    color: #65c6c4; }
+    .animated-arrow:hover > .the-arrow.-left > .shaft {
+      width: 64px;
+      transition-delay: 0.1s;
+      background-color: #65c6c4; }
+      .animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+        width: 8px;
+        transition-delay: 0.1s;
+        background-color: #65c6c4; }
+      .animated-arrow:hover > .the-arrow.-left > .shaft:before {
+        transform: rotate(40deg); }
+      .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+        transform: rotate(-40deg); }
+    .animated-arrow:hover > .main {
+      transform: translateX(80px); }
+      .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+        width: 0;
+        transform: translateX(200%);
+        transition-delay: 0; }
+        .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+          width: 0;
+          transition-delay: 0;
+          transition: all 0.1s; }
+        .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+          transform: rotate(0); }
+        .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+          transform: rotate(0); }
+  .animated-arrow > .main {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s; }
+    .animated-arrow > .main > .text {
+      margin: 0 16px 0 0;
+      line-height: 1; }
+    .animated-arrow > .main > .the-arrow {
+      position: relative; }
+
+.title {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 8em;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block; }
+  .title--about-me {
+    font-size: 32px; }
+
+.title--effect {
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+  line-height: 0.75;
+  color: #fff; }
+
+.title--effect:hover {
+  color: #65c6c4; }
+
+.title--effect::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+  background: #113f67;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+.title--effect:hover::after {
+  transform: translate3d(100%, 0, 0); }
+
+.title--effect::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #424242;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s; }
+
+.title--effect:hover::before {
+  width: 100%; }
+
+.subtitle {
+  max-width: 45%;
+  line-height: 45px; }
+
+.social-media {
+  margin-top: 7em; }
+  .social-media__list {
+    display: flex;
+    margin-top: 2em;
+    padding: 0;
+    list-style: none; }
+  .social-media__item {
+    margin-left: 2em; }
+    .social-media__item:first-child {
+      margin: 0; }
+  .social-media__link, .social-media__link--linkedin, .social-media__link--instagram {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #fff;
+    text-decoration: none; }
+    .social-media__link span, .social-media__link--linkedin span, .social-media__link--instagram span {
+      margin-left: 1em;
+      letter-spacing: 2px; }
+    .social-media__link:hover, .social-media__link--linkedin:hover, .social-media__link--instagram:hover {
+      color: #65c6c4; }
+      .social-media__link:hover svg path, .social-media__link--linkedin:hover svg path, .social-media__link--instagram:hover svg path {
+        fill: #65c6c4; }
+    .social-media__link--linkedin:hover, .social-media__link--linkedin--linkedin:hover, .social-media__link--instagram--linkedin:hover {
+      color: #0e76a8; }
+      .social-media__link--linkedin:hover svg path, .social-media__link--linkedin--linkedin:hover svg path, .social-media__link--instagram--linkedin:hover svg path {
+        fill: #0e76a8; }
+    .social-media__link--instagram:hover, .social-media__link--linkedin--instagram:hover, .social-media__link--instagram--instagram:hover {
+      color: #e1306c; }
+      .social-media__link--instagram:hover svg path, .social-media__link--linkedin--instagram:hover svg path, .social-media__link--instagram--instagram:hover svg path {
+        fill: #e1306c; }
+
+.about-me__text {
+  max-width: 65%;
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 35px; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

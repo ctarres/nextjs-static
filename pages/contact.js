@@ -6,10 +6,8 @@ export default class extends React.Component {
   render() {
     return (
       <Layout>
-        <h1 className="title title--about-me title--effect fade-in one">About me</h1>
-        <div className="about-me__text fade-in two">
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p><p>Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor.</p>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam.</p><p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <h1 className="title title--effect fade-in one">Contact</h1>
+        <div className="contact__form fade-in two">
         </div>
         <div className="social-media fade-in three">
           <ul className="social-media__list">
